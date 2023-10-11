@@ -93,4 +93,9 @@ $(function () {
       }
     }
   })
+  // 課題6「進捗率描画」
+  $('.prog').on('change', function() {
+    let progVal = $(this).val();
+    $(this).closest(".wrapper").find(".progBar").css("width", progVal + "%")
+  });
 });
