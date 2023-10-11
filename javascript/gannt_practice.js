@@ -70,9 +70,27 @@ $(function () {
     //差日を求める（86,400,000ミリ秒＝１日）
     if (planStDateInpt !== "" && planEdDateInpt !== "") {
       planDayOutpt.text((planEdDay - planStDay) / 86400000);
+      // 課題5「終了日変更時バー移動」(予定)
+      $(this).closest(".wrapper").find(".planBar.bar").css("width", 20*((planEdDay - planStDay) / 86400000) +20 + "px");
     }
     if (actStDateInpt !== "" && actEdDateInpt !== "") {
       actDayOutpt.text((actEdDay - actStDay) / 86400000);
+      // 課題5「終了日変更時バー移動」(実績)
+      $(this).closest(".wrapper").find(".actBar.bar").css("width", 20*((actEdDay - actStDay) / 86400000) +20 + "px");
+    }
+
+    // 課題4「開始日変更時バー移動」
+    for (i = 0; i < $(".column_header.column_table .col_day").length; i++){
+      if ($(this)[0].className === "planSt dateInpt ui-selectee") {
+        if ($(".column_header.column_table .col_day")[i].id === $(this).val()) {
+          $(this).closest(".wrapper").find(".planBar.bar").css("marginLeft", 20*(i) + "px")
+        }
+      }
+      if ($(this)[0].className === "actSt dateInpt ui-selectee") {
+        if ($(".column_header.column_table .col_day")[i].id === $(this).val()) {
+          $(this).closest(".wrapper").find(".actBar.bar").css("marginLeft", 20*(i) + "px")
+        }
+      }
     }
   })
 });
