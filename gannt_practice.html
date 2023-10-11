@@ -9,6 +9,7 @@
 	    <link href="css/gannt_practice.css" rel="styleSheet">
         <link href="css/lib/jquery-ui.min.css" rel="styleSheet">
         <link href="css/lib/jquery-ui.structure.min.css" rel="styleSheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/themes/base/jquery-ui.min.css">  <!-- テーマbaseを選択（デフォルト） -->
 	    <!-- JAVASCRIPT -->
 	    <script src="javascript/lib/jquery-3.6.1.min.js"></script>
         <script src="javascript/lib/jquery-ui.min.js"></script>
@@ -105,7 +106,7 @@
 			<!-- テーブルボディ ---------------------------------------------------------------------->
 			<table class="column_body column_table">
 				<tbody id="column_table_body">
-					<tr>
+					<tr class="wrapper">
 						<!-- 入力列 -->
 						<td class="fixed">1</td>
 						<td class="fixed task_title" >ユーザー一覧画面作成</td>
@@ -120,14 +121,14 @@
 						<td>
 							<input type="date" id="planEd_1" class="planEd dateInpt">
 						</td>
-						<td id="planDif_1"></td>
+						<td id="planDif_1" class="planDif"></td>
 						<td>
 							<input type="date" id="actSt_1" class="actSt dateInpt">
 						</td>
 						<td>
 							<input type="date" id="actEd_1" class="actEd dateInpt">
 						</td>
-						<td id="actDif_1"></td>
+						<td id="actDif_1" class="actDif"></td>
 						<td></td>
 						<!-- 日付列 -->
 						<td class="col_day">
@@ -147,7 +148,7 @@
 						<td class="col_day"></td>
 						<td class="col_day"></td>
 					</tr>
-					<tr>
+					<tr class="wrapper">
 						<!-- 入力列 -->
 						<td class="fixed">2</td>
 						<td class="fixed task_title">ユーザー登録画面作成</td>
@@ -162,14 +163,14 @@
 						<td>
 							<input type="date" id="planEd_2" class="planEd dateInpt">
 						</td>
-						<td id="planDif_2"></td>
+						<td id="planDif_2" class="planDif"></td>
 						<td>
 							<input type="date" id="actSt_2" class="actSt dateInpt">
 						</td>
 						<td>
 							<input type="date" id="actEd_2" class="actEd dateInpt">
 						</td>
-						<td id="actDif_2"></td>
+						<td id="actDif_2" class="actDif"></td>
 						<td></td>
 						<!-- 日付列 -->
 						<td class="col_day">
@@ -189,7 +190,7 @@
 						<td class="col_day"></td>
 						<td class="col_day"></td>
 					</tr>
-					<tr>
+					<tr class="wrapper">
 						<!-- 入力列 -->
 						<td class="fixed">3</td>
 						<td class="fixed task_title">ユーザー削除画面作成</td>
@@ -204,14 +205,14 @@
 						<td>
 							<input type="date" id="planEd_3" class="planEd dateInpt">
 						</td>
-						<td id="planDif_3"></td>
+						<td id="planDif_3" class="planDif"></td>
 						<td>
 							<input type="date" id="actSt_3" class="actSt dateInpt">
 						</td>
 						<td>
 							<input type="date" id="actEd_3" class="actEd dateInpt">
 						</td>
-						<td id="actDif_3"></td>
+						<td id="actDif_3" class="actDif"></td>
 						<td></td>
 						<!-- 日付列 -->
 						<td class="col_day">
